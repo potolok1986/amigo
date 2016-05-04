@@ -5,10 +5,11 @@ block content
 	.page
 		header
 			+nav
-			.header_photo
-				-for(var i=1; i<=4; i++)
-					figure
-						img(src="./img/header" + i +".jpg")
+			.header_photo_wrap
+				.header_photo
+					-for(var i=1; i<=4; i++)
+						figure
+							img(src="./img/header" + i +".jpg")
 
 			.header_content.text-center
 				h1 Круглосуточная автомойка<br>самообслуживания

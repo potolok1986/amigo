@@ -16,15 +16,26 @@
 	font-weight: bold;
 }
 .how_it_work_slider{
-
 	.sp-layer{
-		display: flex;
-	}
-	.slider-content{
-		padding: 0 60px;
-		.h3{
+		figure{
+			float: left;
+			width: 50%;
+			max-width: 475px;
+			img{
+				max-width: 100%;
+			}
+		}
+		& > .h3{
+			padding: 0 60px;
+			float: left;
 			margin-bottom: 30px;
 		}
+	}
+	.slider-content{
+		display: inline-block;
+		padding: 0 60px;
+		float: left;
+		width: calc(~"50% - 120px");
 		.stepCount{
 			margin-bottom: 20px;
 		}
@@ -133,7 +144,7 @@
 }
 .photo_slider{
 	position: relative;
-	margin: 0 0 0 -72px!important;
+	//margin: 0 0 0 -72px!important;
 	.sp-slide,.sp-grab,.sp-grabbing{
 		min-height: 435px;
 	}
@@ -254,7 +265,6 @@ form{
 }
 .modal{
 	display: none;
-	transition: opacity 0.3s;
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -263,8 +273,6 @@ form{
 	background: url('./images/fancybox_overlay.png');
 	z-index: 100;
 	.modal_body{
-		transform:  scale(0);
-		transition: scale .5s;
 		position: relative;
 		width: 630px;
 		margin: 0 auto;
@@ -281,9 +289,6 @@ form{
 	}
 	&.open{
 		display: block;
-		.modal_body{
-			transform:  scale(1);
-		}
 	}
 }
 .social{

@@ -1,7 +1,9 @@
 mixin nav
 	nav
 		.logo
-		ul
+		a(href="#").burger_wrap.js-menuOpen
+			span.burger.visible-lg
+		ul.drop_menu
 			li
 				a(href="#how_it_work") Как Это Работает?
 			li

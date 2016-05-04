@@ -1,0 +1,17 @@
+@import "variables";
+
+.mixin-content{
+	width: 100%;
+	max-width: @content-width;
+	margin: 0 auto;
+	@media screen and(max-width: @lg){
+		width: auto;
+		padding-left: 30px;
+		padding-right: 30px;
+		max-width: none;
+	}
+	@media screen and(max-width: @md){
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
