@@ -1,0 +1,20 @@
+mixin how_it_work
+	.how_it_work
+		.how_it_work_slider
+			.sp-slides
+				-for(var i=1;i<=10;i++)
+					.sp-slide
+						.sp-layer
+							figure
+								img(src="./img/slide1.jpg")
+							.slider-content
+								.h3 Как работает Амиго?
+								p.stepCount Шаг&nbsp;
+									span= i
+									|&nbsp;(5-6 минут)
+								p.content Можно продолжать. Осталось 5-6 минут. Внесите еще немного денег из расчета 25 рублей/минута и запустите программу No2 «Основная мойка». Из пистолета польется прозрачный раствор с активным моющим виществом, содержащим микрогранулы, смывающие шампунь и грязь.
+
+								a(href="#" data-slide_func="previousSlide") Назад
+								a(href="#" data-slide_func="nextSlide") Далее
+						.sp-thumbnail
+							span(class="icon-step_"+ i)

@@ -1,0 +1,107 @@
+extends layout
+include ./mixin/include
+
+block content
+	.page
+		header
+			+nav
+			.header_photo
+				-for(var i=1; i<=4; i++)
+					figure
+						img(src="./img/header" + i +".jpg")
+
+			.header_content.text-center
+				h1 Круглосуточная автомойка<br>самообслуживания
+				p с поминутной оплатой, машина бучет чистой <br>меньше чем&nbsp;
+					span за 10 минут!
+		section#how_it_work
+			+how_it_work
+		section#how_much
+			.how_much
+				.table
+					.table_row
+						.left_column
+							.table_header Процедура
+							-var list = ['Турбо','Порошок','Ополаскивание','Воск','Блеск + Сушка','Диски','Щетка']
+							ul.cable_content
+								-each l in list
+									li=l
+						.right_column
+							.table_header Стоимость
+							-list = ['26 ₽','24 ₽',"22 ₽" ,"25 ₽","24 ₽","20 ₽","0 ₽"]
+							ul.cable_content
+								-each l in list
+									li.colorRed.bold=l
+					.table_separete
+					.table_row
+						.left_column
+							.h3 Итого:
+						.right_column
+							.h3 141 ₽
+				.block_price
+					.h3 Сколько это стоит?
+					.content Цена абсолютно прозрачна. Платите поминутно за каждый режим. Весь процесс занимает от <span class="bold">5 до 7 минут максимум</span>
+					.middle_price
+						p
+							i Средняя стоимость<br>мойки не превышает
+						span.arrow-rect
+						.h2.colorRed.bold 125 ₽
+		section#questions.visa
+			.content
+				figure
+					img(src="./img/visa.jpg")
+				p Мы принимаем оплату по безналичному расчету.<br>Есть возможность приобретения <span class="bold">электронные карты</span> или <span class="bold">ключа.</span>
+		section#photo
+			.photo
+				.photo_header
+					a(href="#" data-slide_func="previousSlide").arrow-rect-color
+					a(href="#" data-slide_func="nextSlide").arrow-rect-color
+					.h3 Как выглядит Амиго?
+					p <span>Обратите внимание:</span> очередей нет, потому что<br>процедура мытья очень быстрая
+				+photo_slider
+		section#actions
+			.actions
+				.actions_content
+					figure
+						img(src="./img/clock.png")
+					.h3 Хорошая новость! Каждую неделю у нас <br>действуют счастливые часы.
+					a(href="#" data-modal="#time").arrow-rect-color
+		section#contacts
+			.contacts.text-center
+				.h3 Как нас найти?
+				br
+				p Мы работаем круглосуточно и без выходных<br>по адресам <span class="bold">Зорге 9а</span> и <span class="bold">Рудокоповая 22б</span>
+		section
+			#map
+		section#form
+			.contact
+				.text-center
+					.h3 Отвечаем на вопросы
+					p Мы с радостью ответим на любой интересующий<br>Вас вопрос
+					form
+						.form-line
+							.form-control
+								label(for="name") Имя:
+								input(type="text" name="name" id="name")
+								span.error.hidden Пожалуйста, заполните Ваше имя
+							.form-control
+								label(for="email") Email:
+								input(type="text" name="email" id="email")
+								span.error.hidden Пожалуйста, введите корректный e-mail
+						.form-control
+							label(for="message") Ваш вопрос:
+							textarea(name="message" id="message")
+							span.error.hidden Пожалуйста, введите Ваш вопрос
+						.text-center
+							input(type="submit" value="Отправить")
+					.step2.hidden
+						.text-center
+							.ok
+							br
+							br
+							p Спасибо, Ваш вопрос успешно отправлен!
+		footer
+			+nav
+		.social_nav
+			a(href="#form").social.question.anchor ?
+			a(href="#").social.vk В
