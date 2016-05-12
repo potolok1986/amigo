@@ -15,7 +15,7 @@
 
 	nav {
 		padding: 30px 100px 30px 25px;
-		width: calc(~"100% - 125px");
+		width: 100%;
 	}
 
 	.social_nav {
@@ -29,7 +29,7 @@
 	.burger_wrap {
 		position: absolute;
 		left: 134px;
-		top: 27px;
+		top: 37px;
 		&.open, &:hover {
 			.burger {
 				background-color: #900000;
@@ -100,7 +100,6 @@
 		.sp-layer .h3,
 		.slider-content {
 			padding: 0 45px;
-			width: calc(~"50% - 90px");
 		}
 	}
 
@@ -138,7 +137,7 @@
 	header {
 		nav {
 			padding-left: 25px;
-			width: calc(~"100% - 125px");
+			width: 100%;
 			border-bottom: 1px solid #b80e00;
 		}
 		.header_photo_wrap {
@@ -202,7 +201,7 @@
 				.arrow-rect {
 					display: none;
 				}
-				p {
+				p:hot(.h2) {
 					font-size: 14px;
 					margin-right: 45px;
 				}
@@ -285,9 +284,10 @@
 			text-align: center;
 		}
 	}
-	.modal .modal_body{
+
+	.modal .modal_body {
 		padding: 20px;
-		width: calc(~"100% - 60px");
+		width: 100%;
 		top: 6%;
 	}
 }
@@ -295,22 +295,25 @@
 @media screen and (max-width: @sm) {
 	header {
 		nav {
-			padding: 12px 15px;
-			width: calc(~"100% - 30px");
+			padding: 25px 15px;
+			width: 100%;
 			margin-bottom: 100px;
 			flex-direction: row-reverse;
 			height: 20px;
 			align-items: center;
 			.phone {
+				left: 0;
 				position: absolute;
-				left: calc(~"50% - 71px");
+				width: 100%;
+				text-align: center;
 				top: 100px;
 				&:before {
 					content: "Звоните";
 					font-weight: 400;
 					position: absolute;
 					top: -25px;
-					left: 45px;
+					width: 100%;
+					left: 0;
 				}
 			}
 		}
@@ -358,14 +361,15 @@
 			.middle_price {
 				height: 130px;
 				margin: 0 -25px;
-				p {
-					margin-right: 25px;
+				p:not(.h2) {
+					margin-right: 15px;
 				}
 			}
 		}
 		.table {
 			margin-top: 40px;
 			padding-left: 0;
+			margin-bottom: 30px;
 			.left_column {
 				width: 65%;
 			}
@@ -382,18 +386,18 @@
 		}
 	}
 
-	.photo{
+	.photo {
 		padding: 40px 0;
 	}
-	.photo_slider .sp-layer{
-		transform: scale(1)!important;
+
+	.photo_slider .sp-layer {
+		transform: scale(1) !important;
 	}
-	.contacts{
+
+	.contacts {
 		.paddingBlock(25px);
 		padding-top: 60px;
 	}
-
-
 
 	.contact {
 		.paddingBlock(25px);
@@ -411,44 +415,52 @@
 			margin-bottom: 30px;
 		}
 	}
-	.form-control input{
-		max-width: none;
-		width: calc(~"100% - 54px");
+
+	.form-control {
+		input,textarea {
+			max-width: none;
+			width: 100%;
+		}
 	}
-	footer{
-		nav{
+
+	footer {
+		nav {
 			padding: 0;
-			width: calc(~"100% - 30px");
+			width: 100%;
 			align-items: center;
 			justify-content: center;
 			height: 115px;
 			margin-bottom: 50px;
-			.phone{
+			.phone {
 				display: none;
 			}
 		}
 	}
-	.social_nav{
+
+	.social_nav {
 		bottom: 0;
 		top: inherit;
 		left: 0;
-		.social{
+		width: 100%;
+		.social {
 			margin-bottom: 0;
-			width: calc(~"100% - 5px");
+			width: 100%;
 			color: white;
 			border-width: 5px;
 		}
-		.vk{
-			&:before{
+		.vk {
+			&:before {
 				content: 'ВКонтакте';
 				color: #20688d;
 				position: absolute;
 				top: 5px;
-				left: calc(~"50% - 36px");
+				left: 0;
+				width: 100%;
 			}
 		}
 	}
-	.error{
+
+	.error {
 		left: 45px;
 	}
 }

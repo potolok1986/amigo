@@ -73,7 +73,16 @@ block content
 				br
 				p Мы работаем круглосуточно и без выходных<br>по адресам <span class="bold">Зорге 9а</span> и <span class="bold">Рудокоповая 22б</span>
 		section
-			#map
+			div
+				a(class="dg-widget-link" href="http://2gis.ru/novokuznetsk/profiles/70000001007430492,70000001018756358/center/87.18097686767578,53.77712346403072/zoom/12?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap") Посмотреть на карте Новокузнецка
+				script(charset="utf-8" src="http://widgets.2gis.com/js/DGWidgetLoader.js")
+				script(charset="utf-8").
+					new DGWidgetLoader({"width": "100%","height": 350,"borderColor": "#a3a3a3","pos": {"lat": 53.77712346403072, "lon": 87.18097686767578, "zoom": 11},"opt": {"city": "novokuznetsk"},"org": [{"id": "70000001007430492"}, {"id": "70000001018756358"}]});
+				noscript(style="color:#c00;font-size:16px;font-weight:bold;") Виджет карты использует JavaScript.
+					|Включите его в настройках вашего браузера.
+
+
+
 		section#form
 			.contact
 				.text-center

@@ -23,6 +23,7 @@
 			max-width: 475px;
 			img{
 				max-width: 100%;
+				height: auto;
 			}
 		}
 		& > .h3{
@@ -35,7 +36,7 @@
 		display: inline-block;
 		padding: 0 60px;
 		float: left;
-		width: calc(~"50% - 120px");
+		width: 50%;
 		.stepCount{
 			margin-bottom: 20px;
 		}
@@ -47,7 +48,7 @@
 		a{
 			display: inline-block;
 			line-height: 50px;
-			width: 85px;
+			width: 138px;
 			color: white;
 			font-size: 20px;
 			font-weight: bold;
@@ -191,6 +192,9 @@ form{
 			}
 		}
 	}
+	.text-center{
+		padding-right: 12px;
+	}
 }
 .form-line{
 	display: flex;
@@ -219,10 +223,10 @@ form{
 		}
 	}
 	input{
-		max-width: 184px;
+		max-width: 225px;
 	}
 	textarea{
-		width: calc(~"100% - 54px");
+		width: calc(~"100% - 12px");
 		min-height: 100px;
 		height: auto;
 		overflow: hidden;
@@ -331,4 +335,7 @@ form{
 		padding: 0 13px;
 
 	}
+}
+iframe{
+	border: none!important;
 }
