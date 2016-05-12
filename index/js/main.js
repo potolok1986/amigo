@@ -9,7 +9,8 @@ $(function () {
 
     $(".how_it_work_slider").sliderPro({
         width: "100%",
-        height: 340,
+        height: 320,
+        autoHeight: true,
         autoplay: false,
         buttons: false,
         thumbnailTouchSwipe: true,
@@ -64,22 +65,6 @@ $(function () {
     });
     var photo_slider = new sliderControl(".photo_slider", ".photo_header > a");
     photo_slider.init();
-    // Карта 2 гис
-    var map;
-    DG.then(function () {
-        map = DG.map('map', {
-            center: [53.76160035, 87.17385292],
-            zoom: 13,
-            fullscreenControl: true,
-            scrollWheelZoom: false,
-            zoomControl: true
-        });
-        DG.popup = {
-            minWidth: 350
-        };
-        DG.marker([53.78065468, 87.28023738]).addTo(map).bindLabel("Зорге 9а");
-        DG.marker([53.75745862, 87.0877178]).addTo(map).bindLabel("Рудокоповая 22б");
-    });
     var validation = true;
     // Валидация формы
     $(".contact form").on("submit", function (e) {

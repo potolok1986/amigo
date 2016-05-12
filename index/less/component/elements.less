@@ -41,21 +41,19 @@
 		}
 		.content{
 			min-height: 179px;
+			word-wrap: break-word;
+			margin-bottom: 10px;
 		}
 		a{
 			display: inline-block;
 			line-height: 50px;
 			width: 85px;
-			background-color: #cccccc;
 			color: white;
 			font-size: 20px;
 			font-weight: bold;
 			border: 2px solid white;
 			transition: background .3s;
 			position: relative;
-			&:hover{
-				background-color: #ffd24d;
-			}
 			&:before{
 				content: "";
 				display: block;
@@ -69,6 +67,10 @@
 				padding-right: 45px;
 				margin-left: 7px;
 				text-align: right;
+				background-color: #f9c000;
+				&:hover{
+					background-color: #ffd24d;
+				}
 				&:before{
 					transform: rotate(180deg);
 					right: 10px;
@@ -76,6 +78,10 @@
 			}
 			&[data-slide_func="previousSlide"]{
 				padding-left: 45px;
+				background-color: #aaa;
+				&:hover{
+					background-color: #ccc;
+				}
 				&:before{
 					left: 10px;
 				}
@@ -162,7 +168,8 @@ form{
 	max-width: 475px;
 	margin: 0 auto;
 	input[type="submit"]{
-		height: 48px;
+		padding: 12px 0 16px 0;
+		line-height: 1;
 		border: 2px solid white;
 		border-radius: 1px;
 		color: white;
@@ -172,6 +179,11 @@ form{
 		width: 180px;
 		background-color: #f9c000;
 		margin-top: 25px;
+		letter-spacing: 1.1px;
+		&:hover{
+			cursor: pointer;
+			background-color: #ffd24d;
+		}
 		&[disabled]{
 			background-color: @body-bg;
 			&:hover{
@@ -242,7 +254,7 @@ form{
 	}
 }
 .ok{
-	background: url("../../img/ok.png");
+	background: url("../img/ok.png");
 	display: inline-block;
 	width: 50px;
 	height: 30px;
