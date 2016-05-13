@@ -13,6 +13,15 @@ html
 		link(href="./img/fav/icons_amigo_144px.png" type="image/png" sizes="144x144" rel="apple-touch-icon-precomposed")
 		link(href="./css/main.css" rel="stylesheet" type="text/css")
 		link(href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700,500,500italic,400italic,300italic,300,700italic' rel='stylesheet' type='text/css')
+		script.
+			if ("Microsoft Internet Explorer" == navigator.appName || navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/)) {
+				var a = document.createElement("style");
+				a.type = "text/css";
+				a.styleSheet ?
+						a.styleSheet.cssText = 'body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}' :
+						a.appendChild(document.createTextNode('body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}'));
+				document.head.appendChild(a)
+			};
 	body
 		block content
 		#time.modal

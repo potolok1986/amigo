@@ -39,6 +39,7 @@ $(function () {
     $(".photo_slider").sliderPro({
         width: 465,
         height: 349,
+        autoHeight: true,
         autoplay: false,
         buttons: false,
         visibleSize: '',
@@ -48,7 +49,7 @@ $(function () {
             780: {
                 visibleSize: "auto",
                 width: 375,
-                height: 375,
+                height: 300,
                 autoHeight: true,
                 arrows: true,
                 fadeArrows: false
